@@ -29,12 +29,7 @@ A simple stock app that connects Python with PostgreSQL and creates API requests
     source venv/bin/activate   # On Windows: venv\Scripts\activate
     ```
 
-3. **Install dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **Set up the PostgreSQL database**:
+3. **Set up the PostgreSQL database**:
     - Ensure PostgreSQL is installed and running.
     - Open pgAdmin4 and create a new database:
       - Name: `stock_app_db`
