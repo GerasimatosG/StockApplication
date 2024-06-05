@@ -1,27 +1,53 @@
-to show all Items : /showAll/
+# 📈 Stock App
 
-to create new item : /addItem/ + JSON like this 
-{
-    "name" : "Iphone",
-    "description": "mobile phone",
-    "price": 150,
-    "availability": 12
-}
+A simple stock app that connects Python with PostgreSQL and creates API requests to interact with the database.
 
-to update item WITH URL : /updateItemURL/{ident}==(id of item you want to update after endpoint) 
-update it by adding key - value after {ident}
+## 🌟 Features
 
-to update item WITH JSON : /updateItemJSON/{ident} ==(id of item you want to update after endpoint) 
-update it by adding a json object in raw(can only add the value you want,no need to write the whole object)
+- Connects to a PostgreSQL database
+- Provides a basic interface for API requests to interact with stock data
+- Supports CRUD operations
 
-to delete item : /deleteItem/ and pass the name as a key - value pair of the object you want to delete
+## 🛠️ Requirements
 
-to search specific item : /searchItem/ and pass the name as a key - value pair of the object you want to search
+- Python 3.8+
+- PostgreSQL 12+
+- pgAdmin4
+- Requests (or any HTTP library for API requests)
 
-to update the stock availability : /updateStock/{name}=={name of item whose availability you want to update}
-In key - values pass "plus" to increase the availability or "minus" to decrease it.Then pass availability - the number you want to be added or substracted
+## 🚀 Installation
 
-to get statistics: /statistic/
-In key - values you can pass : statistic - Total Stock to get the availability of all items 
-			       statistic - Average Price to get the avarage price of the items in database
-			       statistic - Highest Price to get the product with the highest price	
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/GerasimatosG/stock-app.git
+    cd stock-app
+    ```
+
+2. **Create and activate a virtual environment**:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate   # On Windows: venv\Scripts\activate
+    ```
+
+3. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Set up the PostgreSQL database**:
+    - Ensure PostgreSQL is installed and running.
+    - Open pgAdmin4 and create a new database:
+      - Name: `stock_app_db`
+    - Create necessary tables using SQL scripts or pgAdmin4 interface.
+
+5. **Configure database connection**:
+    - Update your database configuration in your Python script to connect to `stock_app_db`.
+
+## 🎉 Usage
+
+1. **Run your Python application**:
+    ```bash
+    python main.py
+    ```
+
+2. The app will perform API requests and interact with the PostgreSQL database.
